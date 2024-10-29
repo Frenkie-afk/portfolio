@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Serhii Afanasiev - Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css" />
+</head>
+<body>
+
+<div class="site container container--default d-flex justify-content-between align-items-start">
+    <aside class="sidebar card p-relative">
+        <button class="sidebar__contacts-toggle hide-on-laptop" type="button" id="contacts-toggle">
+            <img class="d-block" src="img/icons/chevron-down-icon.svg" alt="Chevron down" width="13" height="13">
+            <span>Show Contacts</span>
+        </button>
+
+        <div class="sidebar__top">
+            <figure class="sidebar__avatar block-center">
+                <img src="img/photo.webp" alt="Photo" width="445" height="554">
+            </figure>
+
+            <div class="sidebar__info-box">
+                <h1 class="h3 text-center mb-10">Serhii Afanasiev</h1>
+                <p class="sidebar__position text-center text-sm block-center">WordPress Developer</p>
+            </div>
+        </div>
+
+        <div class="contacts-list-wrap">
+            <ul class="sidebar__contacts contacts-list text-sm">
+                <li class="contacts-list__item">
+                    <a href="mailto:frenkiefront@gmail.com" target="_blank"></a>
+                    <figure class="contacts-list__icon flex-center-center flex-shrink-0">
+                        <img src="img/icons/email-icon.svg" alt="Email" width="18" height="18">
+                    </figure>
+
+                    <div class="contacts-list__info">
+                        <p class="text-xs">EMAIL</p>
+                        <p class="text-overflow">frenkiefront@gmail.com</p>
+                    </div>
+                </li>
+                <li class="contacts-list__item">
+                    <a href="tel:380669236870" target="_blank"></a>
+                    <figure class="contacts-list__icon flex-center-center flex-shrink-0">
+                        <img src="img/icons/mobile-icon.svg" alt="Email" width="18" height="18">
+                    </figure>
+
+                    <div class="contacts-list__info">
+                        <p class="text-xs">PHONE</p>
+                        <p class="text-overflow" >+380669236870</p>
+                    </div>
+                </li>
+                <li class="contacts-list__item">
+                    <a href="https://www.linkedin.com/in/sergey-afanasiev/" target="_blank"></a>
+                    <figure class="contacts-list__icon flex-center-center flex-shrink-0">
+                        <img src="img/icons/linkedin-icon.svg" alt="Email" width="18" height="18">
+                    </figure>
+
+                    <div class="contacts-list__info">
+                        <p class="text-xs">LINKEDIN</p>
+                        <p class="text-overflow">https://www.linkedin.com/in/sergey-afanasiev/</p>
+                    </div>
+                </li>
+                <li class="contacts-list__item">
+                    <a href="https://t.me/afanasiev_sy" target="_blank"></a>
+                    <figure class="contacts-list__icon flex-center-center flex-shrink-0">
+                        <img src="img/icons/telegram-icon.svg" alt="Email" width="18" height="18">
+                    </figure>
+
+                    <div class="contacts-list__info">
+                        <p class="text-xs">TELEGRAM</p>
+                        <p class="text-overflow">https://t.me/afanasiev_sy</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content card">
+       <section class="section-spacer">
+           <h2 class="title-divider mb-20">About me</h2>
+           <p class="mb-15">
+               I’m a responsible WordPress developer with passion about learning and delivering the best solutions. <br>
+               For over two years, I’ve been helping businesses and projects achieve their goals.
+           </p>
+           <p>My experience includes creating custom themes, integrating complex APIs, working with WooCommerce, and optimizing websites for high performance.
+               I have a solid understanding of PHP, JavaScript, and modern web technologies.</p>
+       </section>
+
+        <section>
+            <h2 class="title-divider mb-20">Portfolio</h2>
+
+            <ul class="portfolio-list">
+                <li class="portfolio-item p-relative">
+                    <a class="portfolio-item__link" href="https://lutsk.samudoma.com.ua/" target="_blank" title="View website"></a>
+
+                    <figure>
+                       <div class="portfolio-item__img-box p-relative">
+                           <div class="portfolio-item__show-box">
+                               <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                           </div>
+                           <img src="img/projects/sam-udoma.webp" alt="" loading="lazy" width="600" height="450">
+                       </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Sam Udoma</h3>
+                            <p>E-commerce</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://samudoma.com.ua/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/sam-udoma-info.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Sam Udoma Cities</h3>
+                            <p>Business</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://icecream.carpigiani.com/mcdonalds-certification/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/carpigiani.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Carpigiani</h3>
+                            <p>Business</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://civilrights.org/value/justice-reform/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/civil-rights.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Civil Rights</h3>
+                            <p>Personal/News</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://demo.mobizy.io/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/mobizy.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Mobizy</h3>
+                            <p>E-commerce</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://kuva.com/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/kuva.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Kuva</h3>
+                            <p>Business/Info</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://zikicash.com/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/zikicash.webp" alt="" loading="lazy" width="912" height="562">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Zikicash</h3>
+                            <p>Business</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://newline.tech/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/nlt.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">NLT</h3>
+                            <p>Business/Info</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://theonly.link/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/tol.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">TOL</h3>
+                            <p>Business/Info</p>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+</html>
