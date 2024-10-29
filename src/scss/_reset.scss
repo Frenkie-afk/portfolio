@@ -1,0 +1,113 @@
+*, :before, :after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  //height: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  text-rendering: optimizeSpeed;
+  font-size: 100%;
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  border:none;
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  text-align: center;
+  display: block;
+  -webkit-appearance: button;
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+svg, button, a {
+  transition: .4s;
+}
+
+ul { list-style: none; }
+
+form, fieldset {border-style: none;}
+
+input:not([type='radio'],
+[type='button']),
+select,
+textarea {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  max-width: 100%;
+  resize: none;
+}
+::placeholder {
+  opacity: 1;
+}
+
+
+nav, footer, header, aside,
+figure, picture, label, img, a {
+  display: block;
+}
+
+
+img { border-radius: 0; }
+img, svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* inputs autofill reset */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+  /*&::first-line {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+  }*/
+}
+input[data-autocompleted] {
+  background-color: transparent !important;
+}
+
+
+

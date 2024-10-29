@@ -1,0 +1,138 @@
+@use "../base" as *;
+
+.sidebar {
+  --contacts-outer-height: 0;
+
+  &__avatar {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    max-width: clamp(#{rem(80)}, min(21vw, 21vh), #{rem(215)});
+    overflow: hidden;
+    margin-bottom: rem(25);
+  }
+  &__position {
+    width: max-content;
+    padding: clamp(#{rem(2)}, 0.25vw, #{rem(4)}) clamp(#{rem(10)}, 0.25vw, #{rem(12)});
+    border-radius: clamp(#{rem(6)}, 1.25vw, #{rem(8)});
+    background-image: $gradient-accent;
+  }
+
+  .contacts-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: clamp(#{rem(16)}, 3.5vw, #{rem(32)});
+    &__item {
+      position: relative;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: clamp(#{rem(12)}, 2vw, #{rem(16)});
+      &:not(:last-of-type) {
+        margin-bottom: clamp(#{rem(15)}, 3vw, #{rem(30)});
+      }
+
+      > a {
+        @include position(absolute);
+        inset: 0;
+        z-index: 1;
+      }
+    }
+    &__icon {
+      width: clamp(#{rem(30)}, 5.5vw, #{rem(48)});
+      aspect-ratio: 1;
+      padding: 7px;
+      border-radius: clamp(#{rem(6)}, 1vw, #{rem(12)});
+      box-shadow:$shadow-1;
+      background-color: $card-bg;
+    }
+    &__info {
+      min-width: 100%;
+    }
+  }
+  &__contacts-toggle {
+    @include position($position: absolute, $left: false, $right: 0, $bottom: false, $top: 0);
+    padding: 10px 15px;
+    border-radius: 0 rem(15);
+    color: $white-1;
+    background-image: $gradient-accent;
+    font-size: $text-xs;
+    line-height: 1.2;
+    box-shadow: $shadow-2;
+  }
+
+
+  //min-width: 992px
+  @include min-width($laptop) {
+    position: sticky;
+    top: rem(60);
+    flex: 0 0 rem(275);
+    &__top {
+      margin-bottom: clamp(1rem, 3.5vw, 2rem);
+    }
+  }
+
+  // max-width 991px
+  @include max-width($tablet) {
+    width: 100%;
+    &.active {
+      .sidebar__top {
+        margin-bottom: clamp(#{rem(16)}, 3.5vw, #{rem(32)});
+      }
+      .contacts-list {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .contacts-list-wrap {
+        height: var(--contacts-outer-height);
+      }
+    }
+    .contacts-list-wrap {
+      height: 0;
+      transition: $transition-2;
+    }
+    &__top {
+      @include d-flex(false, center);
+      gap: clamp(#{rem(15)}, 3vw, #{rem(25)});
+      transition: margin-bottom $transition-2;
+    }
+    &__info-box {
+      > h1 {
+        text-align: left;
+      }
+      .sidebar__position {
+        margin-left: 0;
+      }
+    }
+    &__avatar {
+      margin: 0;
+    }
+    .contacts-list {
+      @include hidden;
+      transition: opacity $transition-2, visibility $transition-2;
+    }
+  }
+
+  // min width 600px
+  @media (width >= $mobile-sm-res) {
+    &__contacts-toggle img{
+      display: none;
+    }
+  }
+  // max-width 599px
+  @media (width < $mobile-sm-res) {
+    //sidebar active state
+    &.active .sidebar__contacts-toggle img{
+      transform: rotate(180deg);
+    }
+
+    &__contacts-toggle {
+      padding: 10px;
+      span {
+        display: none;
+      }
+      img {
+        transition: transform $transition-2;
+      }
+    }
+  }
+}

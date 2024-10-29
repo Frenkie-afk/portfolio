@@ -1,0 +1,80 @@
+@use "base" as *;
+
+body {
+  font: 400 rem(16)/normal $ff-basic;
+  color: $white-1;
+  background-color: #1f1f47;
+  overflow-x: hidden;
+
+  @keyframes blob-move {
+    from {
+      transform: translate(-55%, -55%) rotate(-90deg);
+      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+    to {
+      transform: translate(-45%, -45%) rotate(-10deg);
+      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+  }
+
+  &:before {
+    @include pseudo('', fixed);
+    top: 50%;
+    left: 50%;
+    width: min(65vw, 85vh);
+    min-width: 400px;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1;
+    z-index: -1;
+    mix-blend-mode: color-dodge;
+    box-shadow: $shadow-1;
+    background: linear-gradient(300deg,#4bc0c8,#c779d0, rgba(254, 172, 94, 0.50));
+    animation: blob-move 25s ease-in-out infinite alternate;
+  }
+
+  &.lock {
+    overflow: hidden;
+    touch-action: none;
+  }
+  .site {
+    padding-block: rem(60);
+    gap: rem(25);
+
+    @media (width < $laptop) {
+      padding-block: rem(30);
+    }
+  }
+
+}
+
+.container {
+  &--fluid {
+    @include container($maxW: 100%);
+  }
+  &--default {
+    @include container($maxW: 1200px);
+  }
+}
+
+.card {
+  padding: clamp(#{rem(15)}, 4vw, #{rem(30)});
+  border-radius: rem(20);
+  overflow: hidden;
+  @include blur;
+  background-color: $card-bg;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: $shadow-1;
+}
+.section-spacer {
+  margin-bottom: clamp(#{rem(20)}, 3.5vw, #{rem(40)});
+}
+
+
+//media
+// max-width 991px
+@include max-width($tablet) {
+  body .site {
+    flex-direction: column;
+  }
+}
+

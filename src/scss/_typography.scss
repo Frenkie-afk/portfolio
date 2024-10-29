@@ -1,0 +1,92 @@
+@use "base" as *;
+
+/* title sizes */
+.h1, h1 {
+  font: 600 #{$h1}/1.22 $ff-basic; // 62px-36px
+}
+.h2, h2 {
+  font: 600 #{$h2}/1.22 $ff-basic; //48px-28px
+}
+.h3, h3 {
+  font: 600 #{$h3}/1.22 $ff-basic; //36px-20px
+}
+.h4, h4 {
+  font: 600 #{$h4}/1.22 $ff-basic;
+}
+.h2, h2, .h3, h3, .h4, h4 {
+  text-transform: capitalize;
+}
+
+.title-divider {
+  position: relative;
+  padding-bottom: clamp(#{rem(5)}, 1.25vw, #{rem(10)});
+  &:after {
+    @include pseudo('', absolute);
+    bottom: 0;
+    left: 0;
+    width: clamp(#{rem(30)}, 4vw, #{rem(40)});
+    height: clamp(#{rem(3)}, 0.75vw, #{rem(5)});
+    //background: linear-gradient(to right, #ff7e71, #ffb25f);
+    background: linear-gradient(to right, #ce1ff6, #575fee);
+    border-radius: rem(3);
+  }
+}
+
+/* text sizes */
+
+.text-xs {
+  font: 400 #{$text-xs}/normal $ff-basic; //12px
+}
+.text-sm {
+  font: 400 #{$text-sm}/normal $ff-basic; //14px
+}
+.text-basic{
+  font: 400 #{$text-basic}/normal $ff-basic; //16px
+}
+.text-md {
+  font: 400 #{$text-md}/normal $ff-basic; //20px - 16px
+}
+
+/* typography alignments */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+/* typography utility classes */
+.text-underline {
+  text-decoration: underline;
+}
+.text-underline-hover {
+  text-decoration: underline transparent;
+  @include hover-supported {
+    text-decoration-color: inherit;
+  }
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* text boldness */
+.fw-400 {
+  font-weight: 400; //regular
+}
+.fw-500 {
+  font-weight: 500; //medium
+}
+.fw-700 {
+  font-weight: 700; //bold
+}
+
+.ff-basic {
+  font-family: $ff-basic;
+}
+
+/* text colors */

@@ -1,0 +1,41 @@
+@use "mixins" as *;
+
+:root {
+  --global-padding: clamp(#{rem(36)}, 10vw, #{rem(200)});
+}
+
+/* colors */
+$white-1: whitesmoke;
+$black-1: #2e2e2e;
+$gray-1: #d6d6d6;
+$gray-2: #EAEAEA;
+$card-bg: rgba(255, 255, 255, 0.15);
+$gradient-accent: radial-gradient(96.23% 85.68% at 14.33% 14.32%, #ce1ff6 0, #575fee 100%);
+
+
+/* fonts */
+$ff-basic: 'Poppins', Arial,  sans-serif;
+
+/* font sizes */
+$h1: rem(48);
+$h2: clamp(rem(22), 4vw, rem(32));
+$h3: clamp(rem(18), 3vw,  rem(24));
+$h4: rem(18);
+
+$text-xs: clamp(rem(11), 2.5vw, rem(12));
+$text-sm: clamp(rem(12), 2.5vw, rem(14));
+$text-basic: rem(16);
+$text-md: rem(18);
+
+$shadow-1: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+$shadow-2: 0 8px 16px hsla(0, 0%, 0%, 0.25);
+
+$transition-1: 0.3s ease;
+$transition-2: 0.4s ease;
+
+/* resolutions */
+$mobile-sm-res: 600px;
+$mobile-res: 767.9px;
+$desktop-res: 768px;
+$tablet: rem(991.9);
+$laptop: rem(992);

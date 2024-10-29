@@ -1,0 +1,148 @@
+@use "base" as *;
+
+/* layout */
+.d-block {
+  display: block;
+}
+.p-relative {
+  position: relative;
+}
+
+/* flex */
+.d-flex {
+  display: flex;
+}
+
+.even-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+
+.flex-center-center {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+}
+.flex-center-between {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-between;
+}
+.flex-center-around {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-around;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.flex-1 {
+  flex: 1;
+}
+
+/* gaps */
+
+.gap-5 {
+  grid-gap: 5px;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-15 {
+  gap: 15px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-25 {
+  gap: 25px;
+}
+
+/* margins */
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mb-20 {
+  margin-bottom: clamp(#{rem(15)}, 2.5vw, #{rem(20)});
+}
+
+.block-center {
+  margin-inline: auto;
+}
+
+
+/* bg colors */
+
+.bg-main {
+  background-color: gray;
+}
+
+
+/* bg colors end*/
+
+
+.rounded-md {
+  border-radius: clamp(8px, 3vw, 24px);
+}
+
+.visually-hidden {
+  overflow: hidden;
+  visibility: hidden;
+  padding: 0;
+  position: absolute !important;
+}
+
+
+.transition-300 {
+  transition: .35s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hide-on-tablet {
+  // max-width 991.9px
+  @include max-width($tablet) {
+    display: none !important;
+  }
+}
+.hide-on-laptop {
+  // min-width  992px
+  @include min-width($laptop) {
+    display: none !important;
+  }
+}
+.hide-on-mobile {
+  // max-width  767px
+  @include max-width($mobile-res) {
+    display: none !important;
+  }
+}
