@@ -26,6 +26,7 @@
       grid-template-columns: auto 1fr;
       align-items: center;
       gap: clamp(#{rem(12)}, 2vw, #{rem(16)});
+      min-width: 100%;
       &:not(:last-of-type) {
         margin-bottom: clamp(#{rem(15)}, 3vw, #{rem(30)});
       }
@@ -45,7 +46,7 @@
       background-color: $card-bg;
     }
     &__info {
-      min-width: 100%;
+      overflow: hidden;
     }
   }
   &__contacts-toggle {
@@ -109,9 +110,6 @@
     .contacts-list {
       @include hidden;
       transition: opacity $transition-2, visibility $transition-2;
-      &__info {
-        overflow: hidden;
-      }
     }
   }
 
