@@ -129,8 +129,8 @@
 }
 
 .hide-on-tablet {
-  // max-width 991.9px
-  @include max-width($tablet) {
+  // max-width 991px
+  @media (width < $laptop) {
     display: none !important;
   }
 }

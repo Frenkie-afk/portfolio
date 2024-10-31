@@ -8,11 +8,11 @@ body {
 
   @keyframes blob-move {
     from {
-      transform: translate(-55%, -55%) rotate(-90deg);
+      transform: translate3d(-55%, -55%, 0) rotate(-90deg);
       border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
     }
     to {
-      transform: translate(-45%, -45%) rotate(-10deg);
+      transform: translate3d(-45%, -45%, 0) rotate(-10deg);
       border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
     }
   }
@@ -20,10 +20,11 @@ body {
   &:before {
     @include pseudo('', fixed);
     top: 50%;
+    top: 50lvh;
     left: 50%;
     width: min(65vw, 85vh);
     min-width: 400px;
-    transform: translate(-50%, -50%);
+    transform: translate3d(-50%, -50%, 0);
     aspect-ratio: 1;
     z-index: -1;
     mix-blend-mode: color-dodge;
@@ -72,7 +73,7 @@ body {
 
 //media
 // max-width 991px
-@include max-width($tablet) {
+@media (width < $laptop) {
   body .site {
     flex-direction: column;
   }

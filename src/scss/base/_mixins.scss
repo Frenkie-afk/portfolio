@@ -37,7 +37,9 @@
 
 /* container */
 @mixin container($maxW: false) {
-  @if $maxW {width: min(100% - var(--global-padding), #{$maxW});}
+  $padding: clamp(#{rem(36)}, 10vw, #{rem(200)});
+
+  @if $maxW {width: min(100% - #{$padding}, #{$maxW});}
   margin-inline: auto;
 }
 

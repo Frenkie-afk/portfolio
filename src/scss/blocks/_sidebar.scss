@@ -26,6 +26,7 @@
       grid-template-columns: auto 1fr;
       align-items: center;
       gap: clamp(#{rem(12)}, 2vw, #{rem(16)});
+      overflow: hidden;
       &:not(:last-of-type) {
         margin-bottom: clamp(#{rem(15)}, 3vw, #{rem(30)});
       }
@@ -71,7 +72,7 @@
   }
 
   // max-width 991px
-  @include max-width($tablet) {
+  @media (width < $laptop) {
     width: 100%;
     &.active {
       .sidebar__top {

@@ -19,7 +19,7 @@ const paths = {
         dest: 'app/js/',
     },
     img: {
-        src: 'src/img/**/*.{jpg,jpeg,png,gif,webp,svg}',
+        src: 'src/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}',
         dest: 'app/img/',
     },
     html: {

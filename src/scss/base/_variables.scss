@@ -1,8 +1,5 @@
 @use "mixins" as *;
 
-:root {
-  --global-padding: clamp(#{rem(36)}, 10vw, #{rem(200)});
-}
 
 /* colors */
 $white-1: whitesmoke;
@@ -36,6 +33,4 @@ $transition-2: 0.4s ease;
 /* resolutions */
 $mobile-sm-res: 600px;
 $mobile-res: 767.9px;
-$desktop-res: 768px;
-$tablet: rem(991.9);
 $laptop: rem(992);
