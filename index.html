@@ -6,11 +6,36 @@
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Serhii Afanasiev - Personal Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="font" href="fonts/Poppins-Regular.woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/Poppins-SemiBold.woff2" crossorigin>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.min.css" />
+
+    <style>
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/Poppins-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
 </head>
 <body>
 
@@ -207,6 +232,22 @@
                         <figcaption class="portfolio-item__info">
                             <h3 class="text-basic fw-500">Zikicash</h3>
                             <p>Business</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="portfolio-list__item p-relative">
+                    <a class="portfolio-item__link" href="https://prosimo.fi/" target="_blank" title="View website"></a>
+                    <figure>
+                        <div class="portfolio-item__img-box p-relative">
+                            <div class="portfolio-item__show-box">
+                                <img class="d-block" src="img/icons/eye-icon.svg" alt="Icon" width="20" height="20">
+                            </div>
+                            <img src="img/projects/Prosimo.webp" alt="" loading="lazy" width="600" height="450">
+                        </div>
+
+                        <figcaption class="portfolio-item__info">
+                            <h3 class="text-basic fw-500">Prosimo</h3>
+                            <p>Services</p>
                         </figcaption>
                     </figure>
                 </li>
