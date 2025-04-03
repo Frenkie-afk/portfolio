@@ -30,6 +30,10 @@ const paths = {
 
 const clean = () => del(['app/*']);
 
+const fonts = () => {
+    return src('src/fonts/**').pipe(dest('app/fonts'));
+};
+
 const html = () => {
     return src(paths.html.src)
         .pipe(dest(paths.html.dest))
@@ -85,6 +89,6 @@ exports.default = series(
     clean,
     img,
     // webP,
-    parallel(styles, scripts, html),
+    parallel(styles, scripts, html, fonts),
     follow
 );

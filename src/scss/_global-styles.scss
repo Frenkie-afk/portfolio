@@ -28,15 +28,17 @@ body {
     aspect-ratio: 1;
     z-index: -1;
     mix-blend-mode: color-dodge;
+    filter: blur(rem(9));
     box-shadow: $shadow-1;
-    background: linear-gradient(300deg,#4bc0c8,#c779d0, rgba(254, 172, 94, 0.50));
-    animation: blob-move 25s ease-in-out infinite alternate;
+    background: linear-gradient(300deg, #4bc0c8, #c779d0, rgba(254, 172, 94, 0.50));
+    animation: blob-move 21s ease-in-out infinite alternate;
   }
 
   &.lock {
     overflow: hidden;
     touch-action: none;
   }
+
   .site {
     padding-block: rem(60);
     gap: rem(25);
@@ -52,6 +54,7 @@ body {
   &--fluid {
     @include container($maxW: 100%);
   }
+
   &--default {
     @include container($maxW: 1200px);
   }
@@ -66,6 +69,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: $shadow-1;
 }
+
 .section-spacer {
   margin-bottom: clamp(#{rem(20)}, 3.5vw, #{rem(40)});
 }
